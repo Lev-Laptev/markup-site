@@ -1,13 +1,100 @@
 
 .main {
-    margin-bottom: 107px;
-    padding-top: 76px;
-    padding-bottom: 45px;
-    background-color: $white;
-    font-family: $font-family;
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 107px;
 
-    // .container {
-    //     max-width: 980px;
-    //     margin: 0 auto;
-    // }
+        @media (min-width: 1600px) {
+            margin-bottom: 120px;
+        }
+    }
+
+    &__block {
+        width: 100%;
+        max-width: 660px;
+
+        @media (min-width: 1200px) {
+            max-width: 1000px;
+        }
+
+        @media (min-width: 1600px) {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1572px;
+        }
+    }
+
+    .slick-track {
+        display: flex;
+    }
+    .slick-initialized .slick-slide {
+        display: flex;
+    }
+
+    &__dots {
+        position: absolute;
+        bottom: -45px;
+        display: block;
+        width: 100%;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+
+        li {
+            position: relative;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin: 0 5px;
+            padding: 0;
+            cursor: pointer;
+
+            .slick-active button:before {
+                opacity: .75;
+                color: $black;
+            }
+
+            button {
+                font-size: 0;
+                line-height: 0;
+                display: block;
+                width: 20px;
+                height: 20px;
+                padding: 5px;
+                cursor: pointer;
+                color: transparent;
+                border: 0;
+                outline: none;
+                background: transparent;
+
+                &:hover,
+                &:focus {
+                    outline: none;
+                }
+
+                &:hover:before,
+                &:focus:before {
+                    opacity: 1;
+                }
+
+                &:before {
+                    font-family: 'slick';
+                    font-size: 6px;
+                    line-height: 20px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 20px;
+                    height: 20px;
+                    content: url('https://upload.wikimedia.org/wikipedia/commons/b/b7/Rule_Segment_-_Circle_open_-_20px.svg');
+                    text-align: center;
+                    opacity: .25;
+                    color: $black;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                }
+            }
+        }
+    }
 }

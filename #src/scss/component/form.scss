@@ -1,17 +1,37 @@
 .form {
     display: flex;
     flex-direction: column;
+    max-width: 300px;
+
+    @media (min-width: 1200px) {
+        max-width: none;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 13px;
+
+        @media (min-width: 1200px) {
+            flex-direction: row;
+        }
+    }
+
     &__link , &__conset{
         font-weight: 400;
         font-size: 14px;
         line-height: 18px;
         color: $dark-blue;
     }
-    &__link {
-        text-decoration: none;
-    }
+
     &__submit {
+        margin-top: 50px;
         width: 100%;
-        margin-bottom: 13px;
+        
+        @media (min-width: 1200px) {
+            margin-top: 0px;
+            width: 209px;
+        }
     }
 }

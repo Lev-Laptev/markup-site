@@ -2,7 +2,12 @@
     .button_#{$key} {
         background-color: $val;
     }
+
     .card__svg_#{$key} {
+        color: $val;
+    }
+    
+    .card__title_#{$key} {
         color: $val;
     }
 }

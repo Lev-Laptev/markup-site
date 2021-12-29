@@ -1,10 +1,18 @@
 .card {
     display: flex;
     flex-direction: column;
+    width: 100%;
     max-width: 320px;
+    margin: 0 auto;
     background: $card-background;
     border: $border;
     box-sizing: border-box;
+
+    @media (min-width: 1600px) {
+        margin: inherit;
+        max-width: 357px;
+    }
+
     &__img {
         img {
             max-width: 100%;
@@ -19,7 +27,7 @@
     }
     &__svg {
         position: absolute;
-        top: -27px;
+        top: -23px;
         right: 15px;
         width: 55px;
         height: 42px;
@@ -31,7 +39,6 @@
         font-weight: 700;
         font-size: 18px;
         line-height: 25px;
-        color: #FF0013;
         text-transform: uppercase;
     }
     &__prices {
@@ -51,23 +58,33 @@
             font-weight: 300;
             font-size: 23.3389px;
             text-decoration-line: line-through;
-            color: #274562;
+            color: $blue;
         }
         &_now {
             margin-bottom: 28px;
             font-weight: 600;
             font-size: 43.7604px;
             line-height: 100%;
-            color: #274562;
+            color: $blue;
         }
     }
     &__discount {
-        padding: 3px 16px 5px 3px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 32px;
+        width: 132px;
+        padding: 3px 16px;
         font-weight: 700;
         font-size: 20.4215px;
         line-height: 100%;
-        color: #000000;
-        background-color: #FEED01;
+        color: $blue;
+        background-image: url('../img/icons/icons.svg#card');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        box-sizing: border-box;
     }
     &__info {
         margin-bottom: 33px;
@@ -78,7 +95,7 @@
         line-height: 100%;
         text-align: center;
         text-transform: uppercase;
-        color: #274562;
+        color: $blue;
 
         border-top: $border;
         border-bottom: $border;
