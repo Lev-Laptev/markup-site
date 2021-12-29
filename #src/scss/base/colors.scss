@@ -1,0 +1,8 @@
+@each $key, $val in $colors {
+    .button_#{$key} {
+        background-color: $val;
+    }
+    .card__svg_#{$key} {
+        color: $val;
+    }
+}

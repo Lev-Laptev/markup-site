@@ -1,0 +1,17 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    &__link , &__conset{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: $dark-blue;
+    }
+    &__link {
+        text-decoration: none;
+    }
+    &__submit {
+        width: 100%;
+        margin-bottom: 13px;
+    }
+}
