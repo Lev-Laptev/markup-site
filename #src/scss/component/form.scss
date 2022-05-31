@@ -1,6 +1,7 @@
 .form {
     display: flex;
     flex-direction: column;
+
     max-width: 300px;
 
     @media (min-width: 1200px) {
@@ -10,7 +11,9 @@
     &__wrapper {
         display: flex;
         flex-direction: column;
+
         width: 100%;
+
         margin-bottom: 13px;
 
         @media (min-width: 1200px) {
@@ -26,12 +29,14 @@
     }
 
     &__submit {
-        margin-top: 50px;
         width: 100%;
+
+        margin-top: 50px;
         
         @media (min-width: 1200px) {
-            margin-top: 0px;
             width: 209px;
+            
+            margin-top: 0px;
         }
     }
 }
